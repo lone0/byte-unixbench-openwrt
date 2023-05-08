@@ -1,0 +1,11 @@
+--- a/UnixBench/Run	2023-05-08 02:59:13.888906415 +0000
++++ b/UnixBench/Run	2023-05-08 02:59:31.225279022 +0000
+@@ -1764,7 +1764,7 @@
+         $tests = $index;
+     }
+ 
+-    preChecks();
++    # preChecks();
+     my $systemInfo = getSystemInfo();
+ 
+     # If the number of copies to run was not set, set it to 1
