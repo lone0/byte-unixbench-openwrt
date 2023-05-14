@@ -39,17 +39,10 @@ endef
 define Build/Configure
 endef
 
-TARGET_CFLAGS += \
-	-Wall -pedantic -DTIME
-
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR)/UnixBench \
 		$(TARGET_CONFIGURE_OPTS) \
-		prefix="$(PKG_INSTALL_DIR)/usr" \
-		CFLAGS="$(TARGET_CFLAGS)" \
-		CF="$(TARGET_CFLAGS) -O $(TARGET_CPPFLAGS)" \
-		CC="$(TARGET_CC)" \
-		LD="$(TARGET_CC) $(TARGET_LDFLAGS)"
+		prefix="$(PKG_INSTALL_DIR)/usr"
 endef
 
 define Package/$(PKG_NAME)/install
